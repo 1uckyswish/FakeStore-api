@@ -1,0 +1,21 @@
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    align-items: center;
+}
+
+.header-container > h1{
+    font-style:normal;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 29px;
+    color: #3A4895;
+}
+
+.cart-icon{
+    font-size: 2em;
+    color: #3A4895;
+}

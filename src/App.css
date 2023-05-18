@@ -7,7 +7,14 @@
   font-family: 'Inter';
 }
 
+:root{
+  --Page-Color: #FAFAFA;
+  --Blue-Page-Color: #3A4895;
+  --Black-Text: #000000;
+  --Grey-Text: ##949494;
+  --Font: 'Inter';
+}
 .App{
-  background-color: #FAFAFA;
+  background-color: var(--Page-Color);
   min-height: 100vh;
 }

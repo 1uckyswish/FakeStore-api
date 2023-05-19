@@ -3,16 +3,25 @@
     border: 2px solid red;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .category-container{
     display: flex;
-    width: 50%;
+    align-items: center;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     text-align: center;
-      color: var(--Blue-Page-Color);
+    color: var(--Blue-Page-Color);
+    width: 50%;
+    margin-left: 60px;
+}
+
+.product-container{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
 }

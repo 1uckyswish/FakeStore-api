@@ -32,12 +32,17 @@ function Homepage() {
   .catch((err) => console.log(err));
     }, []);
 
+
   // handle a filter button system to load diffrent categories for products
 //https://fakestoreapi.com/products/category/women's%20clothing
   const handleFilter = (category) => {
     console.log(`The Category is ${category}`);
+    let url = "https://fakestoreapi.com/products"
+    if(category != "all"){
+     url =`https://fakestoreapi.com/products/category/${category}`
+    }
     //grab the value of every button to create a query
-    axios.get(`https://fakestoreapi.com/products/category/${category}`)
+    axios.get(url)
     .then(productResult => {
       // get the data from the api and append it to the product card
       console.log(productResult.data)
@@ -51,7 +56,7 @@ function Homepage() {
   return (
     <div className='homepage-container'>
       <div className='category-container'>
-        <p className='category'>All</p>
+        <p className='category' type='all' onClick={(e)=> handleFilter(e.target.innerText)}>All</p>
         {  //using the map function to make a <p> tag for each category
         // grabbing the index of the first category we are able to get the first letter
         // get the string value and append the value of the capital letter and add it to the position of the word by using slic to remove the first lower case letter.

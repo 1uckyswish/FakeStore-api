@@ -40,8 +40,9 @@ color: #282828;
 }
 
 .product-card img{
-    width: 83px;
-    height: 117px;
+    width: auto;
+    height: 120px;
+    object-fit: cover;
 }
 
 .product-card .img-box{

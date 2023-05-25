@@ -18,6 +18,7 @@ function ProductCard({products}) {
             <p>{products?.title}</p>
             <p>{products?.category}</p>
             <p>${products?.price}</p>
+            <a id='temp-button'href='/details'>Details</a>
         </div>
     </div>
   )

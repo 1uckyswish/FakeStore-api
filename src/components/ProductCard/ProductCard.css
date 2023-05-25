@@ -72,3 +72,10 @@ padding: 5px 15px;
     color: white;
     
 }
+
+#temp-button{
+   background-color: lightblue;
+   width: auto;
+   height: 30px;
+   color: coral;
+}

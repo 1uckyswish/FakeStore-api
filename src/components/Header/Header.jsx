@@ -6,7 +6,9 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 function Header() {
   return (
     <div className='header-container'>
-      <h1>Fake Store</h1>
+      <a href="/">
+        <h1>Fake Store</h1>
+        </a>
       <AiOutlineShoppingCart className='cart-icon'/>
     </div>
   )

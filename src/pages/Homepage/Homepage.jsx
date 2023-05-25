@@ -58,7 +58,7 @@ function Homepage() {
         {  //using the map function to make a <p> tag for each category
         // grabbing the index of the first category we are able to get the first letter
         // get the string value and append the value of the capital letter and add it to the position of the word by using slic to remove the first lower case letter.
-        categories.map((element, index) => <p onClick={()=> handleFilter(element)} key={element}>{element.charAt(0).toUpperCase() + element.slice(1)}</p>)
+        categories.map((element) => <p onClick={()=> handleFilter(element)} key={element}>{element.charAt(0).toUpperCase() + element.slice(1)}</p>)
         }
       </div>
       <div className='product-container'>

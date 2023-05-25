@@ -17,10 +17,13 @@
     margin-left: 60px;
 }
 
+.category-container p{
+    cursor: pointer;
+}
+
 .product-container{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
-    padding:  80px 100px;
-    border: 2px solid red;
+    padding:  30px 140px;
    }

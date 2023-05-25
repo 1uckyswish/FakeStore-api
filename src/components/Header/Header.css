@@ -12,6 +12,9 @@
     font-weight: bolder;
     font-size: 24px;
     line-height: 29px;
+}
+.header-container a{
+    background-color: #FCFCFC;
     color: var(--Blue-Page-Color);
 }
 

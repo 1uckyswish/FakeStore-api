@@ -21,17 +21,21 @@
 .details-container .details-info{
     display: flex;
     flex-direction: column;
-    height: 300px;
-    width: 300px;
-    justify-content: space-evenly;
+    height: auto;
+    width: 450px;
+    justify-content: space-around;
 }
 
-.details-container .details-info h2{
+.details-container .details-info h3{
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
 color: #282828;
+padding: 5px 0;
+}
+.details-container .details-info p{
+    padding: 8px 0px;
 }
 
 .details-container .details-info p:nth-child(2){
@@ -50,6 +54,7 @@ color: #282828;
 font-weight: 400;
 font-size: 16px;
 color: #000000;
+text-align:justify;
 }
 
 .details-container .details-info button{

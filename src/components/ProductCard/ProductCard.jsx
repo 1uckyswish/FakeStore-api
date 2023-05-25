@@ -1,6 +1,5 @@
 import React from 'react'
 import "./ProductCard.css"
-import Homepage from '../../pages/Homepage/Homepage'
 import { AiFillHeart } from "react-icons/ai";
 //AiFillHeart
 
@@ -10,7 +9,7 @@ function ProductCard({products}) {
   return (
     <div className='product-card'>
         <div className='img-box'> 
-            <a href={`/details/${products.id}`}><img src={products?.image} alt={products?.title}/></a>
+            <a href={`/details/${products?.id}`}><img src={products?.image} alt={products?.title}/></a>
             <div className='icon-box'>
                 <AiFillHeart className='heart-icon'/>
             </div>

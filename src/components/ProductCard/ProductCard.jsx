@@ -4,12 +4,13 @@ import Homepage from '../../pages/Homepage/Homepage'
 import { AiFillHeart } from "react-icons/ai";
 //AiFillHeart
 
-// pass in the prop from the componet to transfer data to XTML
+//* pass in the prop from the component to transfer data to XTML
+//* apply the props as JSON to the specific areas.
 function ProductCard({products}) {
   return (
     <div className='product-card'>
         <div className='img-box'> 
-            <img src={products?.image} alt={products.title}/>
+            <a href={`/details/${products.id}`}><img src={products?.image} alt={products?.title}/></a>
             <div className='icon-box'>
                 <AiFillHeart className='heart-icon'/>
             </div>
@@ -18,7 +19,6 @@ function ProductCard({products}) {
             <p>{products?.title}</p>
             <p>{products?.category}</p>
             <p>${products?.price}</p>
-            <a id='temp-button'href='/details'>Details</a>
         </div>
     </div>
   )

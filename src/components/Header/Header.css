@@ -5,6 +5,7 @@
     align-items: center;
     padding: 20px 30px;
     align-items: center;
+     background-color: #FAFAFA;
 }
 
 .header-container > h1{
@@ -18,7 +19,24 @@
     color: var(--Blue-Page-Color);
 }
 
+.header-container .count-button{
+    background-color: red;
+position: absolute;
+width: 6.24px;
+height: 15px;
+left: 1363.1px;
+top: 20px;
+font-weight: 700;
+font-size: 12px;
+padding: 12px;
+border-radius: 20px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
 .cart-icon{
-    font-size: 2em;
+    font-size: 3em;
     color: var(--Blue-Page-Color);
 }

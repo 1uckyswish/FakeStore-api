@@ -9,6 +9,7 @@ function Header() {
       <a href="/">
         <h1>Fake Store</h1>
         </a>
+        <p className='count-button'>1</p>
       <AiOutlineShoppingCart className='cart-icon'/>
     </div>
   )

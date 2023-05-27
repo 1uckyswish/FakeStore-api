@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FAFAFA;
 }
 .category-container{
     display: flex;
@@ -10,11 +11,12 @@
     font-size: 20px;
     line-height: 24px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     color: var(--Blue-Page-Color);
-    width: 50%;
-    margin-left: 60px;
+    width: 60%;
+    margin: 20px 0 0 90px;
+    /* border: 2px solid red; */
 }
 
 .category-container p{
@@ -25,5 +27,5 @@
    display: flex;
    flex-wrap: wrap;
    align-items: center;
-    padding:  30px 140px;
+   padding: 30px 100px 30px 100px;
    }

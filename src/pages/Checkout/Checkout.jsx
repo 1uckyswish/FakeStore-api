@@ -19,8 +19,12 @@ function Checkout() {
           </div>
         </div>
               {
-        hearted.map(item=> <CartCheckout productsAdded={item} key={item.id} />)
-      }
+                hearted == 0
+                ?
+                <p>Sorry Nothing in cart yet</p>
+                :
+                hearted.map(item=> <CartCheckout productsAdded={item} key={item.id} />)
+              }
       </div>
     </div>
   )

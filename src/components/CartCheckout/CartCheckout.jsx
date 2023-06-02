@@ -6,10 +6,12 @@ function CartCheckout({productsAdded}) {
   return (
       <div className='product-items'>
          <img src={productsAdded.image} alt={productsAdded.image}/>
-        <p>{productsAdded.title}</p>
+         <div className='title-wrap'>
+            <p>{productsAdded.title}</p>
+         </div>
         <p>${productsAdded.price}</p>
         <p>1</p>
-        <BsTrash />
+        <BsTrash className='trash-icon'/>
       </div>
   )
 }

@@ -2,15 +2,16 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: #FAFAFA;
 }
 
 .details-container{
-    width: 863px;
-    height: 783px;
-    background: #FFFFFF;
+    width: 75%;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 50px 0;
 }
 
 .details-container .details-img img{
@@ -26,7 +27,7 @@
     justify-content: space-around;
 }
 
-.details-container .details-info h3{
+.details-info h3{
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -34,30 +35,31 @@ font-size: 24px;
 color: #282828;
 padding: 5px 0;
 }
-.details-container .details-info p{
+
+ .details-info p{
     padding: 8px 0px;
 }
 
-.details-container .details-info p:nth-child(2){
+ .details-info p:nth-child(2){
 font-weight: 600;
 font-size: 24px;
 color: #282828;
 }
 
-.details-container .details-info p:nth-child(3){
+.details-info p:nth-child(3){
 font-weight: 600;
 font-size: 20px;
 color: #282828;
 }
 
-.details-container .details-info p:nth-child(4){
+ .details-info p:nth-child(4){
 font-weight: 400;
 font-size: 16px;
 color: #000000;
 text-align:justify;
 }
 
-.details-container .details-info button{
+ .details-info button{
 width: 156px;
 height: 41px;
 background: #FFD814;
@@ -67,4 +69,16 @@ font-weight: 700;
 font-size: 14px;
 text-align: center;
 color: #282828;
+}
+
+.details-info .red-button{
+    background-color: #e41404;;
+    width: 156px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #282828;
 }

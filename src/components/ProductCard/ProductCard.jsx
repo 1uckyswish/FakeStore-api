@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import {useContext, useState, useEffect} from 'react';
 import "./ProductCard.css";
 import { AiFillHeart, AiTwotoneHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ function ProductCard({products}) {
   useEffect(
     ()=>{
       //**set the state if the product is already added to cart **/
-      setIsHearted(hearted.find(item => item.id === products.id))
+      setIsHearted(hearted.find(item => item.id === products?.id))
       //**This will give a BOOLEAN result **/
       //**if the current item added to cart equals the id of the item displayed make it true **/
     }, [hearted] //**anytime hearted is changed this useEffect gets triggered on change **/

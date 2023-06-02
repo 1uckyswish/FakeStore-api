@@ -1,4 +1,4 @@
-import { useContext, createContext, useEffect, useState} from "react";
+import { createContext, useState} from "react";
 //**Start off by creating a context to be set global for the whole page to use it **/
 
 //**This is what will be used to access the data globally **/

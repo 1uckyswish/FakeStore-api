@@ -10,9 +10,9 @@ function Header() {
   const {hearted} = useContext(HeartedContext)
   return (
     <div className='header-container'>
-      <a href="/">
+      <Link to="/">
         <h1>Fake Store</h1>
-        </a>
+        </Link>
         <Link to="/checkout" className='cart-container'>
           <AiOutlineShoppingCart className='cart-icon'/>
           {

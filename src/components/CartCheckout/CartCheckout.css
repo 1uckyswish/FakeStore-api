@@ -1,9 +1,32 @@
 .product-items{
     display: flex;
-    border: 1px solid red;
+    justify-content: space-between;
+    padding: 20px 80px;
+    border-bottom: 2px solid #D9D9D999;
+    align-items: center;
 }
 
 .product-items img{
-    width: 20px;
-    height: 20px;
+     width: 13%;
+    height: 20%;
+    object-fit: contain;
+}
+
+.product-items p{
+font-weight: 700;
+font-size: 17px;
+display: flex;
+align-items: center;
+color: #282828;
+}
+
+.title-wrap{
+    width: 17%;
+    display: flex;
+    justify-content: center;
+}
+
+.trash-icon{
+    font-size: 3em;
+    align-items: center;
 }

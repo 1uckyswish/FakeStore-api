@@ -17,26 +17,18 @@
     width: 100%;
 }
 
-.product-card .product-info p:nth-child(1){
+.product-info p:nth-child(1), .product-info p:nth-child(3){
 font-size: 12px;
 color: #282828;
 font-weight: 700;
 padding: 5px 15px;
 }
 
-.product-card .product-info p:nth-child(2){
+ .product-info p:nth-child(2){
 font-weight: 400;
  padding: 5px 15px;
 font-size: 10px;
 color: #949494;
-}
-
-.product-card .product-info p:nth-child(3){
-font-size: 12px;
-line-height: 15px;
-color: #282828;
- font-weight: 600;
-padding: 5px 15px;
 }
 
 .product-card img{
@@ -46,7 +38,7 @@ padding: 5px 15px;
    margin: 35px 15px;
 }
 
-.product-card .img-box{
+.img-box{
     border-radius: 15px;
     margin-top: 20px;
     display: flex;
@@ -57,7 +49,22 @@ padding: 5px 15px;
      border: 2px solid #EFEFEF;
 }
 
-.product-card .img-box .icon-box .heart-icon{
+ .heart-icon{
+    background-color: #E7E7E7;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 4px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.dark-icon{
+    color: var(--Blue-Page-Color);
+    font-size: 1.5em;
     background-color: #E7E7E7;
     width: 30px;
     height: 30px;
@@ -66,16 +73,10 @@ padding: 5px 15px;
     position: absolute;
     top: 10px;
     right: 10px;
+    cursor: pointer;
 }
 
-.product-card .img-box .heart-icon{
+ .heart-icon{
     color: white;
-    
 }
 
-#temp-button{
-   background-color: lightblue;
-   width: auto;
-   height: 30px;
-   color: coral;
-}

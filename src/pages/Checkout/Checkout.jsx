@@ -8,12 +8,21 @@ import CartCheckout from '../../components/CartCheckout/CartCheckout';
 function Checkout() {
    const {hearted} = useContext(HeartedContext);
   return (
-    <div>
-      {
+    <div className='checkout-container'>
+      <div className='checkout-items'>
+        <div className='item-details'>
+          <p>Item</p>
+          <div className='item-sub-details'>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Remove</p>
+          </div>
+        </div>
+              {
         hearted.map(item=> <CartCheckout productsAdded={item} key={item.id} />)
       }
+      </div>
     </div>
   )
 }
-
 export default Checkout

@@ -1,0 +1,9 @@
+.product-items{
+    display: flex;
+    border: 1px solid red;
+}
+
+.product-items img{
+    width: 20px;
+    height: 20px;
+}

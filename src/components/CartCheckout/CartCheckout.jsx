@@ -4,14 +4,15 @@ import { BsTrash } from 'react-icons/bs';
 
 function CartCheckout({productsAdded}) {
   return (
-    <div>
-        <img src={productsAdded.image} alt={productsAdded.image}/>
+      <div className='product-items'>
+         <img src={productsAdded.image} alt={productsAdded.image}/>
         <p>{productsAdded.title}</p>
         <p>${productsAdded.price}</p>
         <p>1</p>
         <BsTrash />
-    </div>
+      </div>
   )
 }
+
 
 export default CartCheckout

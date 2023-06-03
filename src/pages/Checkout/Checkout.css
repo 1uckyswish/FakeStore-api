@@ -39,3 +39,31 @@ color: #979797;
 .item-sub-details p{
     padding: 0 30px;
 }
+
+.total-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: self-end;
+    margin-left: 68%;
+    margin-bottom: 5%;
+}
+
+.total-container p{
+font-weight: 600;
+font-size: 24px;
+color: #282828;
+padding: 30px 30px 40px 30px;
+}
+
+.total-container button{
+width: 156px;
+height: 41px;
+background: #FFD814;
+cursor: pointer;
+font-weight: 700;
+font-size: 14px;
+color: #282828;
+border: none;
+}

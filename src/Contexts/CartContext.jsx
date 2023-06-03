@@ -8,6 +8,7 @@ export default function HeartedContextProvider(props){
     //**create state to hold the data that is Hearted **/
     const [hearted, setHearted] = useState([]);
     //**This array holds an array of objects, so we need to set its value to an empty array **/
+    const [total, setTotal] = useState(0)
 
     //**Lets create a function to add hearted items **/
     //**Add a parameter that will get the whole data from the Product**/
@@ -25,9 +26,14 @@ export default function HeartedContextProvider(props){
     const removeProduct = (productId)=>{
         console.log("removed", productId);
         //**if the id doesn't match throw them out and keep the ones that do**/
-        let updatedProdcuts = hearted.filter(item => item.id !== productId);
+        let updatedProducts = hearted.filter(item => item.id !== productId);
+        //** if the vlaue is not inside then it makes a new array and gets updated to state*/
         //**building a new array **/
-        setHearted(updatedProdcuts)
+        setHearted(updatedProducts)
+    }
+
+    const getTotal = (productTotal)=>{
+        setTotal(hearted.map(item=> item.price + 1))
     }
 
 

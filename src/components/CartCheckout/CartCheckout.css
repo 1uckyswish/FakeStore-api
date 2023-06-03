@@ -7,7 +7,7 @@
 }
 
 .product-items img{
-     width: 13%;
+     width: 100px;
     height: 20%;
     object-fit: contain;
 }
@@ -27,6 +27,14 @@ color: #282828;
 }
 
 .trash-icon{
-    font-size: 3em;
+    font-size: 2.3em;
     align-items: center;
+}
+
+ .error-message{
+    color: #ff615d;
+     display: flex;
+    justify-content: center;
+    padding: 20px 80px;
+    border-bottom: 2px solid #D9D9D999;
 }

@@ -42,20 +42,6 @@ function DetailsPage() {
     // * runs one time only 
   )
 
-
-
-  // useEffect(
-  //   ()=>{
-  //     axios.get(`https://fakestoreapi.com/products`)
-  // .then((result) => {
-  //   //* console log the data and apply to state
-  //   //*  console.log(result.data)
-  //   setLoadedProducts(result.data)
-  // })
-  // .catch((err) => console.log(err));
-  //   },[]
-  // )
- 
   useEffect(() => {
     const foundProduct = hearted.find((product) => product.id === itemDetails?.id);
     setIsAdded(foundProduct);

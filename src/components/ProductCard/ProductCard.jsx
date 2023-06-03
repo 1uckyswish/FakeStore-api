@@ -19,9 +19,10 @@ function ProductCard({products}) {
     ()=>{
       //**set the state if the product is already added to cart **/
       setIsHearted(hearted.find(item => item.id === products?.id))
+      //** goes through each selected and if equals then it will turn true/
       //**This will give a BOOLEAN result **/
       //**if the current item added to cart equals the id of the item displayed make it true **/
-    }, [hearted] //**anytime hearted is changed this useEffect gets triggered on change **/
+    }, [hearted, products] //**anytime hearted is changed this useEffect gets triggered on change **/
   );
 
   return (

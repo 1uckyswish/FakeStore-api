@@ -1,4 +1,4 @@
-import { createContext, useState} from "react";
+import { createContext, useState, useEffect} from "react";
 //**Start off by creating a context to be set global for the whole page to use it **/
 
 //**This is what will be used to access the data globally **/
@@ -8,7 +8,6 @@ export default function HeartedContextProvider(props){
     //**create state to hold the data that is Hearted **/
     const [hearted, setHearted] = useState([]);
     //**This array holds an array of objects, so we need to set its value to an empty array **/
-    const [total, setTotal] = useState(0)
 
     //**Lets create a function to add hearted items **/
     //**Add a parameter that will get the whole data from the Product**/
@@ -32,11 +31,29 @@ export default function HeartedContextProvider(props){
         setHearted(updatedProducts)
     }
 
-    const getTotal = (productTotal)=>{
-        setTotal(hearted.map(item=> item.price + 1))
-    }
+    //** check local storage to set state */
+    useEffect(
+        ()=>{
+            //** retrieve the data from local storage */
+            //* whatever we called the varibale to set it in local storage access that string 
+            const storedCartedData = localStorage.getItem("Carted");
+            // console.log(storedCartedData)
+            //** set the state if there is something inside local storage */
+            //* if data is inside the variable in local storage turn into a object
+            if(storedCartedData){
+                setHearted(JSON.parse(storedCartedData))
+            }
 
+        },[]
+    )
 
+    //** set the storage */
+  useEffect(
+        ()=>{
+            localStorage.setItem("Carted", JSON.stringify(hearted));
+        },[hearted]
+    )
+    
     return(
         //**Give it the value of state as its value (HEARTED)& a function (addProduct) **/
         <HeartedContext.Provider value={{hearted, addProduct, removeProduct}}>

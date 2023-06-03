@@ -1,7 +1,7 @@
 import {useContext} from 'react'
 import './CartCheckout.css'
 import { BsTrash } from 'react-icons/bs';
-import { HeartedContext } from '../../Contexts/CartContext';
+import { HeartedContext } from '../../contexts/HeartedContext';
 import { Link } from 'react-router-dom';
 
 function CartCheckout({productsAdded}) {

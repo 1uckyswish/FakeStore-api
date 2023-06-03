@@ -6,7 +6,7 @@ import Header from './components/Header/Header'
 import Homepage from './pages/Homepage/Homepage';
 import ContactUs from './pages/ContactUs/ContactUs';
 import DetailsPage from './pages/DetailsPage/DetailsPage';
-import HeartedContextProvider from './Contexts/CartContext';
+import HeartedContextProvider from './contexts/HeartedContext';
 import Checkout from './pages/Checkout/Checkout';
 function App() {
 //** anybody inside will be able to use the heated context*/

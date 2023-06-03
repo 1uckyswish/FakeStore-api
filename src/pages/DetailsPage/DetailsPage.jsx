@@ -2,7 +2,7 @@ import {useEffect, useState, useContext}from 'react'
 import "./DetailsPage.css"
 import {useParams} from 'react-router-dom'
 import axios from 'axios';
-import { HeartedContext } from '../../Contexts/CartContext';
+import { HeartedContext } from '../../contexts/HeartedContext';
 
 function DetailsPage() {
   //* returns the details for the specific product when button/tab is clicked

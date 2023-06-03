@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import "./Header.css"
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { HeartedContext } from '../../Contexts/CartContext';
+import { HeartedContext } from '../../contexts/HeartedContext';
 import { Link } from 'react-router-dom';
 // AiOutlineShoppingCart
 

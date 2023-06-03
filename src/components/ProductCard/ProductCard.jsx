@@ -2,7 +2,7 @@ import {useContext, useState, useEffect} from 'react';
 import "./ProductCard.css";
 import { AiFillHeart, AiTwotoneHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import { HeartedContext } from '../../Contexts/CartContext';
+import { HeartedContext } from '../../contexts/HeartedContext';
 //AiFillHeart
 
 //* pass in the prop from the component to transfer data to XTML

@@ -56,7 +56,7 @@ export default function HeartedContextProvider(props){
     
     return(
         //**Give it the value of state as its value (HEARTED)& a function (addProduct) **/
-        <HeartedContext.Provider value={{hearted, addProduct, removeProduct}}>
+        <HeartedContext.Provider value={{hearted, addProduct, removeProduct, setHearted}}>
             {props.children}
         </HeartedContext.Provider>
         //**We then wrap it in APP.jsx to give it access to the other pages **/

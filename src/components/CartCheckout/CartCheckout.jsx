@@ -12,14 +12,14 @@ function CartCheckout({productsAdded}) {
     
       <div className='product-items'>
        <Link to={`/details/${productsAdded?.id}`}>
-         <img src={productsAdded.image} alt={productsAdded.image}/>
+         <img src={productsAdded?.image} alt={productsAdded?.image}/>
          </Link>
          <div className='title-wrap'>
-            <p>{productsAdded.title}</p>
+            <p>{productsAdded?.title}</p>
          </div>
-        <p>${productsAdded.price}</p>
+        <p>${productsAdded?.price.toFixed(2)}</p>
         <p>1</p>
-        <BsTrash onClick={()=> removeProduct(productsAdded.id)} className='trash-icon'/>
+        <BsTrash onClick={()=> removeProduct(productsAdded?.id)} className='trash-icon'/>
       </div>
   )
 }

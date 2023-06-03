@@ -30,7 +30,7 @@ const customStyles = {
 
 Modal.setAppElement(document.getElementById('root'));
 
-   const {hearted} = useContext(HeartedContext);
+   const {hearted, setHearted} = useContext(HeartedContext);
    //** store total in state to update on page */
    const [total, setTotal] = useState(0);
   
@@ -43,7 +43,7 @@ Modal.setAppElement(document.getElementById('root'));
       updatedTotal += element.price;
     });
     //** set the refrence value to the state function to get total to update */
-    setTotal(updatedTotal);
+    setTotal(updatedTotal.toFixed(2));
       },[hearted] //** only render when everything carted gets updated. as in removed or added */
     )
 
@@ -75,13 +75,17 @@ Modal.setAppElement(document.getElementById('root'));
                     <button onClick={()=> setIsCheckedOut(true)} >Checkout</button>
                     <Modal
                 isOpen={isCheckedOut}
-                onRequestClose={()=> setIsCheckedOut(false)}
+                // onRequestClose={()=> setIsCheckedOut(false)}
                 style={customStyles}
                 contentLabel="Checkout Modal">
                 <div className='modal-container'>
                   <h1>Your Order was successful!</h1>
                   <h2>Check your email for the order confirmation. Thank you for shopping with Fake Store!</h2>
-                  <Link to="/"><button className='modal-button' onClick={()=> setIsCheckedOut(false)}>Return To Main Page</button></Link>
+                  <Link to="/">
+                    <button className='modal-button' onClick={()=> setHearted([])}>
+                      Return To Main Page
+                    </button>
+                    </Link>
                 </div>
               </Modal>
                 </div>

@@ -114,7 +114,7 @@ color: #282828;
 }
 }
 
-/* Moblie Css */
+/* Mobile Css */
 @media screen and (max-width: 616px){
    .details-container{
     width: auto;

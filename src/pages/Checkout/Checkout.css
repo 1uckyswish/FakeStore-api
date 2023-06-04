@@ -138,3 +138,10 @@ color: #979797;
     transform: scale(1);
   }
 }
+
+/* mobile css */
+@media screen and (max-width: 616px){
+  .item-details{
+    display: none;
+  }
+}

@@ -14,14 +14,13 @@ const [isCheckedOut, setIsCheckedOut] = useState(false)
 
 const customStyles = {
   content: {
-    top: '50%',
+     top: '50%',
     left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: "692px",
-    height: "536px"
+    width: '90%', // Adjust the width based on your design
+    maxWidth: '692px', // Set a maximum width if needed
+    maxHeight: '90vh', // Set a maximum height if needed
+    overflow: 'auto', // Enable scrolling if the content overflows
   },
   overlay:{
     backgroundColor: 'rgba(0,0,0, .5)'

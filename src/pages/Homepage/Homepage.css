@@ -4,23 +4,53 @@
     flex-direction: column;
     background-color: #FAFAFA;
 }
-.category-container{
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    color: var(--Blue-Page-Color);
-    width: 60%;
-    margin: 20px 0 0 90px;
+
+.category-container {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  color: var(--Blue-Page-Color);
+  width: 60%;
+  margin: 20px 0 0 90px;
 }
 
-.category-container p{
-    cursor: pointer;
+.category-container p {
+  cursor: pointer;
+  position: relative; /* Add position relative to allow absolute positioning of pseudo-elements */
+  z-index: 1; /* Increase z-index to appear above pseudo-elements */
 }
+
+.category-container p::before,
+.category-container p::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD814; /* Adjust the color of the line */
+  transition: width 0.3s ease; /* Add transition property for width */
+}
+
+.category-container p::before {
+  top: 0;
+  left: 0;
+}
+
+.category-container p::after {
+  bottom: 0;
+  right: 0;
+}
+
+.category-container p:hover::before,
+.category-container p:hover::after {
+  width: 100%; /* Increase the width to 100% on hover */
+}
+
+
 
 .product-container{
    display: flex;

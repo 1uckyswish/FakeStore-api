@@ -139,6 +139,14 @@ color: #979797;
   }
 }
 
+@media screen and (max-width: 656px){
+  .error-message{
+    display: flex;
+    word-wrap: break-word;
+    text-align: center;
+  }
+}
+
 /* mobile css */
 @media screen and (max-width: 616px){
   .item-details{

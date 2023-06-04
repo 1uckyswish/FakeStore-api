@@ -57,9 +57,8 @@ font-size: 16px;
 color: #000000;
 text-align:justify;
 }
-
- .details-info button{
-width: 156px;
+.details-button {
+  width: 156px;
 height: 41px;
 background: #FFD814;
 border: none;
@@ -68,6 +67,7 @@ font-weight: 700;
 font-size: 14px;
 text-align: center;
 color: #282828;
+transition: transform 0.3s ease;
 }
 
 .details-info .red-button{
@@ -80,11 +80,6 @@ color: #282828;
     font-size: 14px;
     text-align: center;
     color: #282828;
-}
-
-.details-button {
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .details-button:hover {

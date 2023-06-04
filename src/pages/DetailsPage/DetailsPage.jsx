@@ -61,9 +61,9 @@ function DetailsPage() {
                 <p>{itemDetails?.description}</p>
                 {
                   isAdded?
-                  <button className='red-button' onClick={()=> removeProduct(itemDetails.id)} >Remove From Cart</button> 
+                  <button className='details-button red-button' onClick={()=> removeProduct(itemDetails.id)} >Remove From Cart</button> 
                   :
-                  <button onClick={()=> addProduct(itemDetails)} >Add to Cart</button> 
+                  <button className='details-button' onClick={()=> addProduct(itemDetails)} >Add to Cart</button> 
                 }
                 {/* <button>Add to Cart</button> */}
             </div>

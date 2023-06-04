@@ -47,6 +47,8 @@ Modal.setAppElement(document.getElementById('root'));
       },[hearted] //** only render when everything carted gets updated. as in removed or added */
     )
 
+    // const [orderComplete, setOrderComplete] = useState(false);
+
   return (
     <div className='checkout-container'>
       <div className='checkout-items'>
@@ -72,7 +74,12 @@ Modal.setAppElement(document.getElementById('root'));
                 :
                 <div className='total-container'>
                     <p>Total: ${total}</p>
-                    <button onClick={()=> setIsCheckedOut(true)} >Checkout</button>
+                   {
+                    !isCheckedOut?
+                     <button className='checkout-button' onClick={()=> setIsCheckedOut(true)} >Checkout</button>
+                     :
+                    <button className='checkout-button checked'  >Checked Out</button>
+                   }
                     <Modal
                 isOpen={isCheckedOut}
                 // onRequestClose={()=> setIsCheckedOut(false)}

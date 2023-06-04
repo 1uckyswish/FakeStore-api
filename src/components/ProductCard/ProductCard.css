@@ -49,6 +49,21 @@ color: #949494;
      border: 2px solid #EFEFEF;
 }
 
+.img-box img {
+  transition: transform 0.5s ease;
+}
+
+.img-box img:hover {
+  transform: scale(1.2);
+}
+
+.img-box img:hover:not(:hover) {
+  transition: transform 1s ease;
+  transform: scale(1);
+}
+
+
+
  .heart-icon{
     background-color: #E7E7E7;
     color: white;

@@ -42,7 +42,7 @@ function ProductCard({products}) {
         </div>
         <div className='product-info'>
             <p>{products?.title}</p>
-            <p>{products?.category}</p>
+            <p>{products?.category.charAt(0).toUpperCase() + products?.category.slice(1)}</p>
             <p>${products?.price.toFixed(2)}</p>
         </div>
     </div>

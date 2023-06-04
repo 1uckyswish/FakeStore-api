@@ -82,3 +82,24 @@ color: #282828;
     text-align: center;
     color: #282828;
 }
+
+.details-button {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.details-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

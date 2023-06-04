@@ -9,7 +9,7 @@
     background-color: var(--Blue-Page-Color);
     color: #FCFCFC;
     width: auto;
-    height: 66px;
+    height: 100px;
     padding: 0 40px;
     text-decoration: none;
 }
@@ -17,4 +17,18 @@ a{
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.dark-footer-container, .dark-footer-container a{
+     background-color: #282828;
+    color: #bb86fc;
+}
+
+.dark-footer-container{
+    border: 3px solid grey;
+}
+
+.social-icons{
+    font-size: 3em;
 }

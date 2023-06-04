@@ -7,13 +7,15 @@ import Homepage from './pages/Homepage/Homepage';
 import ContactUs from './pages/ContactUs/ContactUs';
 import DetailsPage from './pages/DetailsPage/DetailsPage';
 import HeartedContextProvider from './contexts/HeartedContext';
+import ThemeContextProvider from './contexts/DarkModeContext';
 import Checkout from './pages/Checkout/Checkout';
 function App() {
-//** anybody inside will be able to use the heated context*/
+//** anybody inside will be able to use the heated context and theme context*/
 //* directs traffic 
   return (
       <BrowserRouter>
       <HeartedContextProvider> 
+        <ThemeContextProvider>
         <Header />
         <Routes>
           <Route path='/' element={<Homepage />} />
@@ -22,6 +24,7 @@ function App() {
           <Route path='/details/:productId' element={<DetailsPage />} />
         </Routes>
         <Footer />
+        </ThemeContextProvider>
         </HeartedContextProvider>
       </BrowserRouter>
   )

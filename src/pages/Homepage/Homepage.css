@@ -16,7 +16,6 @@
     color: var(--Blue-Page-Color);
     width: 60%;
     margin: 20px 0 0 90px;
-    /* border: 2px solid red; */
 }
 
 .category-container p{
@@ -29,3 +28,37 @@
    align-items: center;
    padding: 30px 100px 30px 100px;
    }
+
+/* tablet css */
+
+@media screen and (max-width: 918px) {
+.category-container{
+    width: 100%;
+    margin: 0;
+}
+ .product-container{
+    padding: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+ }
+}
+
+/* mobile css */
+
+@media screen and (max-width: 616px){
+.category-container{
+    width: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.category-container p{
+    padding: 8px;
+}
+
+ .product-container{
+    width: 100%;
+ }
+}

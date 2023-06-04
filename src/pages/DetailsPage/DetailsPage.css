@@ -14,12 +14,11 @@
     margin: 50px 0;
 }
 
-.details-container .details-img img{
+.details-img img{
     width: 300px;
     object-fit: contain;
 }
-
-.details-container .details-info{
+ .details-info{
     display: flex;
     flex-direction: column;
     height: auto;
@@ -102,4 +101,27 @@ color: #282828;
   100% {
     transform: scale(1);
   }
+}
+
+/* tablet css  */
+@media screen and (max-width: 918px){
+  .details-container{
+    flex-direction: column;
+  }
+  .details-img img{
+    width: 200px;
+    object-fit: contain;
+}
+}
+
+/* Moblie Css */
+@media screen and (max-width: 616px){
+   .details-container{
+    width: auto;
+  }
+
+   .details-info{
+    width: auto;
+    margin: 0 20px;
+   }
 }

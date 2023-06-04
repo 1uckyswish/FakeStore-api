@@ -65,3 +65,38 @@ color: #282828;
     padding: 20px 80px;
     border-bottom: 2px solid #D9D9D999;
 }
+
+@media screen and (max-width: 1120px){
+.product-items{
+  justify-content: space-between;
+  padding: 50px 0;
+  width:auto;
+}
+}
+
+@media screen and (max-width: 616px){
+  .product-items{
+  flex-direction: column;
+  text-align: center;
+}
+
+.product-items a{
+  height: 100px;
+  align-items: center;
+  width:auto;
+  margin: 10px;
+}
+
+.product-items img{
+     width: auto;
+     height: 100px;
+}
+
+.title-wrap{
+  width: 35%;
+}
+
+.product-items p{
+  padding: 10px 0;
+}
+}

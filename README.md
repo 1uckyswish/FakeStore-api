@@ -33,7 +33,7 @@ To set up the project environment, follow these steps:
 The project structure is as follows:
 - `src/`
   - `components/`: Contains reusable UI components.
-  - `containers/`: Includes container components for managing state.
+  - `pages/`: Includes pages to display and operate content.
 
 
 ## Conclusion

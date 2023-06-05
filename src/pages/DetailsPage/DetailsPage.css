@@ -131,6 +131,7 @@ transition: transform 0.3s ease;
 @media screen and (max-width: 616px){
    .details-container{
     width: auto;
+    margin: 40px;
   }
 
    .details-info{

@@ -17,10 +17,9 @@ function Homepage() {
   //* Load the categories and products when page loads
   useEffect(
     ()=>{
-      //get the data from the api
+      //*get the data from the api
    axios.get(`https://fakestoreapi.com/products/categories`)
   .then((res)=>{
-    //* console.log(res.data);
     //* These are the categories from api. What do i do with them next?
     //* store data in state
     setCategories(res.data);
@@ -30,25 +29,21 @@ function Homepage() {
   //* make the second api call for products
   axios.get(`https://fakestoreapi.com/products`)
   .then((result) => {
-    //* console log the data and apply to state
-    //*  console.log(result.data)
     setProducts(result.data);
   })
   .catch((err) => console.log(err));
     }, []);
 
 
-  //* handle a filter button system to load diffrent categories for products
+  //* handle a filter button system to load different categories for products
 //* https://fakestoreapi.com/products/category/women's%20clothing
   const handleFilter = (category) => {
-    console.log(`The Category is ${category}`);
     let url = "https://fakestoreapi.com/products"
     category != "All" ? url =`https://fakestoreapi.com/products/category/${category}` :  url
     //* grab the value of every button to create a query
     axios.get(url)
     .then(productResult => {
       //* get the data from the api and append it to the product card
-      console.log(productResult.data)
       setProducts(productResult.data)
     })
     .catch((productError) => console.log(productError));
@@ -75,7 +70,7 @@ function Homepage() {
       </div>
       <div className='product-container'>
         { //* call the component "ProductCard" to append the html to container
-          //* apply a prop to the component to recive the data as well as apply an ID
+          //* apply a prop to the component to receive the data as well as apply an ID
          product.map((item) => <ProductCard products={item} key={item.id} />)
         }
       </div>

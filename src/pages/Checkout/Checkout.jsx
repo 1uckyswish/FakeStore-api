@@ -45,12 +45,10 @@ Modal.setAppElement(document.getElementById('root'));
     hearted.forEach(element => {
       updatedTotal += element.price;
     });
-    //** set the refrence value to the state function to get total to update */
+    //** set the reference value to the state function to get total to update */
     setTotal(updatedTotal.toFixed(2));
       },[hearted] //** only render when everything carted gets updated. as in removed or added */
     )
-
-    // const [orderComplete, setOrderComplete] = useState(false);
 
   return (
     <div className={

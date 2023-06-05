@@ -4,9 +4,8 @@ import { AiFillHeart, AiTwotoneHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { HeartedContext } from '../../contexts/HeartedContext';
 import { ThemeContext } from '../../contexts/DarkModeContext';
-//AiFillHeart
 
-//* pass in the prop from the component to transfer data to XTML
+//* pass in the prop from the component to transfer data to xml
 //* apply the props as JSON to the specific areas.
 function ProductCard({products}) {
 

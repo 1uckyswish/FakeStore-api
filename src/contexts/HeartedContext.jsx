@@ -13,20 +13,17 @@ export default function HeartedContextProvider(props){
     //**Add a parameter that will get the whole data from the Product**/
     //**we need to make this function global to have access on other pages**/
     const addProduct = (productToAdd) =>{
-        console.log("adding", productToAdd);
         //** add the parameter to make a new array **/
         let listOfProducts = [...hearted, productToAdd];
-        console.log(listOfProducts);
         setHearted(listOfProducts);
     };
 
     //**Lets create a function to Remove hearted items **/
     //**we have to make it available so we need it add it to our array of objects**/
     const removeProduct = (productId)=>{
-        console.log("removed", productId);
         //**if the id doesn't match throw them out and keep the ones that do**/
         let updatedProducts = hearted.filter(item => item.id !== productId);
-        //** if the vlaue is not inside then it makes a new array and gets updated to state*/
+        //** if the value is not inside then it makes a new array and gets updated to state*/
         //**building a new array **/
         setHearted(updatedProducts)
     }
@@ -35,9 +32,8 @@ export default function HeartedContextProvider(props){
     useEffect(
         ()=>{
             //** retrieve the data from local storage */
-            //* whatever we called the varibale to set it in local storage access that string 
+            //* whatever we called the variable to set it in local storage access that string 
             const storedCartedData = localStorage.getItem("Carted");
-            // console.log(storedCartedData)
             //** set the state if there is something inside local storage */
             //* if data is inside the variable in local storage turn into a object
             if(storedCartedData){

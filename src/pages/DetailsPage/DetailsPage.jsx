@@ -44,6 +44,9 @@ function DetailsPage() {
     // * runs one time only 
   )
 
+  //* function to check if item is added to cart is found within the hearted array then return true
+  //* call the function to update the state
+  //* put the two dependency's to activate a re-render
   useEffect(() => {
     const foundProduct = hearted.find((product) => product.id === itemDetails?.id);
     setIsAdded(foundProduct);
@@ -82,7 +85,6 @@ function DetailsPage() {
                   :
                   <button className='details-button' onClick={()=> addProduct(itemDetails)} >Add to Cart</button> 
                 }
-                {/* <button>Add to Cart</button> */}
             </div>
         </div>
     </div>

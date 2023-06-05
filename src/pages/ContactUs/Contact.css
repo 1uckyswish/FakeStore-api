@@ -10,9 +10,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 863px;
-    height: 783px;
+    width: 600px;
+    height: 600px;
     background: #FFFFFF;
+    border-radius: 20px;
 }
 
 .form-container h1{
@@ -20,6 +21,15 @@
     font-size: 32px;
     color: #282828;
     margin: 20px;
+}
+
+.dark-form-container{
+background-color: lightgray;
+color: #bb86fc;
+}
+
+.dark-contact-container{
+background-color: #282828;
 }
 
 input{
@@ -57,5 +67,44 @@ input::placeholder{
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+}
+
+/* tablet */
+
+@media screen and (max-width: 700px){
+.form-container{
+   width: 350px;
+   height: 550px;
+}
+ .form-container input[type="text"]:nth-of-type(1),
+.form-container input[type="text"]:nth-of-type(2) {
+    width: 250px;
+    height: 50px;
+}
+
+
+.form-container input[type="text"]:nth-of-type(3) {
+    width: 250px;
+    padding-bottom: 100px;
+}
+}
+
+@media screen and (max-width: 400px){
+    .form-container{
+   width: 340px;
+   height: 550px;
+}
+
+ .form-container input[type="text"]:nth-of-type(1),
+.form-container input[type="text"]:nth-of-type(2) {
+    width: 250px;
+    height: 50px;
+}
+
+
+.form-container input[type="text"]:nth-of-type(3) {
+    width: 250px;
+    padding-bottom: 100px;
+}
 }
 

@@ -24,9 +24,8 @@ To set up the project environment, follow these steps:
 1. Clone this project repository: `git clone https://github.com/1uckyswish/fake-store-project.git`
 2. Change to the project directory: `cd fake-store-project`
 3. Install project dependencies: `npm install`
-4. Configure Firebase credentials and settings.
-5. Start the development server: `npm start`
-6. Access the project at: `http://localhost:3000`
+4. Start the development server: `npm start`
+5. Access the project at: `http://localhost:3000`
 
 ## Project Structure
 The project structure is as follows:

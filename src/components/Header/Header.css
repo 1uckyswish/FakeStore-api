@@ -22,7 +22,7 @@
 .cart-icon{
     font-size: 3.5em;
     color: var(--Blue-Page-Color);
-    background-color: white;
+    background-color: FAFAFA;
 }
 
 .header-dark, .header-dark h1, .header-dark .cart-container, .dark-cart-icon{

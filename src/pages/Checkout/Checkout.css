@@ -6,11 +6,20 @@
     justify-content: center;
 }
 
+.dark-checkout-container{
+  background-color: #282828;
+}
+
 .checkout-items{
     width: 75%;
     background-color: white;
     margin: 50px 0;
 }
+
+.dark-checkout-items{
+  background-color: lightgrey;
+}
+
 
 .item-details{
     display: flex;
@@ -20,6 +29,13 @@
     padding: 20px 20px;
     border-bottom: 2px solid #D9D9D999;
     background-color: white;
+}
+
+.dark-item-details{
+  background-color: #484848;
+}
+.dark-item-details p:first-child, .dark-item-details p:nth-child(2), .dark-item-details p:nth-child(3){
+  color: #bb86fc;
 }
 
 .item-details p{

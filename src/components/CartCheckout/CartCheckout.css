@@ -10,6 +10,7 @@
      width: 100px;
     height: 20%;
     object-fit: contain;
+     mix-blend-mode: multiply;
 }
 
 .product-items p{

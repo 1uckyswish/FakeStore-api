@@ -4,10 +4,14 @@ import { HeartedContext } from '../../contexts/HeartedContext';
 import CartCheckout from '../../components/CartCheckout/CartCheckout';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
-
+import { ThemeContext } from '../../contexts/DarkModeContext';
 
 
 function Checkout() {
+  //** toggle dark mode */
+  //** use context for global state */
+  const {darkMode} = useContext(ThemeContext);
+
 //** create state to control modal */
 
 const [isCheckedOut, setIsCheckedOut] = useState(false)
@@ -49,9 +53,24 @@ Modal.setAppElement(document.getElementById('root'));
     // const [orderComplete, setOrderComplete] = useState(false);
 
   return (
-    <div className='checkout-container'>
-      <div className='checkout-items'>
-        <div className='item-details'>
+    <div className={
+      darkMode?
+      'checkout-container'
+      :
+      'checkout-container dark-checkout-container'
+    }>
+      <div className={
+        darkMode?
+        'checkout-items'
+        :
+        'checkout-items dark-checkout-items'
+      }>
+        <div className={
+          darkMode?
+          'item-details'
+          :
+          'item-details dark-item-details'
+        }>
           <p>Item</p>
           <div className='item-sub-details'>
             <p>Price</p>

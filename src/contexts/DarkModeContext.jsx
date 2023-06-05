@@ -8,6 +8,25 @@ export default function ThemeContextProvider(props){
 
     const [darkMode, setDarkMode] = useState(true);
 
+    useEffect(
+        ()=>{
+          const storedData = localStorage.getItem('darkMode');
+          //* checks if data is inside
+          if(storedData){
+            //* set state with this value
+            setDarkMode(JSON.parse(storedData))
+          }
+
+        }, []
+    )
+
+
+    useEffect(
+        ()=>{
+        localStorage.setItem('darkMode', JSON.stringify(darkMode))
+        },[darkMode]
+    )
+
     return(
         //* pass the value and the function
         <ThemeContext.Provider value={{darkMode, setDarkMode}}>

@@ -26,7 +26,7 @@ a{
 }
 
 .dark-footer-container{
-    border: 3px solid grey;
+    border-top: 3px solid grey;
 }
 
 .social-icons{

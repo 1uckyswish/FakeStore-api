@@ -1,5 +1,7 @@
 # Fake Store Project
 
+# A live Preview of the website is [Here](https://noelfakestore.netlify.app/)
+
 ---
 
 ## Introduction

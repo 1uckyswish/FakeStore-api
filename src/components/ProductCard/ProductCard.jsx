@@ -3,11 +3,17 @@ import "./ProductCard.css";
 import { AiFillHeart, AiTwotoneHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { HeartedContext } from '../../contexts/HeartedContext';
+import { ThemeContext } from '../../contexts/DarkModeContext';
 //AiFillHeart
 
 //* pass in the prop from the component to transfer data to XTML
 //* apply the props as JSON to the specific areas.
 function ProductCard({products}) {
+
+  //** toggle dark mode */
+  //** use context for global state */
+  const {darkMode} = useContext(ThemeContext);
+
   //* start with state to check heart functionality 
   const [isHearted, setIsHearted] = useState(false);
   //**Use the global CartContext to get the props from it**/
@@ -26,7 +32,12 @@ function ProductCard({products}) {
   );
 
   return (
-    <div className='product-card'>
+    <div className={
+      darkMode?
+      'product-card'
+      :
+      'product-card dark-product-card'
+    }>
         <div className='img-box'> 
             <Link to={`/details/${products?.id}`}><img src={products?.image} alt={products?.title}/></Link>
             <div className='icon-box'>
@@ -40,7 +51,12 @@ function ProductCard({products}) {
                 }
             </div>
         </div>
-        <div className='product-info'>
+        <div className={
+          darkMode?
+          'product-info'
+          :
+          'product-info dark-product-info'
+        }>
             <p>{products?.title}</p>
             <p>{products?.category.charAt(0).toUpperCase() + products?.category.slice(1)}</p>
             <p>${products?.price.toFixed(2)}</p>

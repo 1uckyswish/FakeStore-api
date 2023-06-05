@@ -3,6 +3,7 @@ import "./DetailsPage.css"
 import {useParams} from 'react-router-dom'
 import axios from 'axios';
 import { HeartedContext } from '../../contexts/HeartedContext';
+import { ThemeContext } from '../../contexts/DarkModeContext';
 
 function DetailsPage() {
   //* returns the details for the specific product when button/tab is clicked
@@ -14,8 +15,9 @@ function DetailsPage() {
   //* store the current JSON data in state to apply to XML
   const [itemDetails, setItemDetails] = useState([]);
  
-//  //**Load all the products */
-//  const [loadedProducts, setLoadedProducts] = useState([])
+  //** toggle dark mode */
+  //** use context for global state */
+  const {darkMode} = useContext(ThemeContext);
 
   //* start with false
   const [isAdded, setIsAdded] = useState(false);
@@ -49,12 +51,27 @@ function DetailsPage() {
 
 
   return (
-    <div className='details-main-container'>
-        <div className='details-container'>
+    <div className={
+      darkMode?
+      'details-main-container'
+      :
+      'details-main-container dark-details-main-container'
+    }>
+        <div className={
+          darkMode?
+          'details-container'
+          :
+          'details-container dark-details-container'
+        }>
             <div className='details-img'>
                 <img src={itemDetails?.image}/>
             </div>
-            <div className='details-info'>
+            <div className={
+              darkMode?
+              'details-info'
+              :
+              'details-info dark-details-info'
+            }>
                 <h3>{itemDetails?.title}</h3>
                 <p>${itemDetails?.price}</p>
                 <p>Description</p>

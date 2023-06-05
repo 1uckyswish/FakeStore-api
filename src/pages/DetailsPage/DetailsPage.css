@@ -5,6 +5,19 @@
     background-color: #FAFAFA;
 }
 
+.dark-details-main-container{
+  background-color: #282828;
+  color: #bb86fc;
+}
+
+.dark-details-main-container .dark-details-container{
+  background-color: lightgray;
+}
+
+.dark-details-main-container .dark-details-container h3, .dark-details-main-container .dark-details-container p{
+  color: #bb86fc;
+}
+
 .details-container{
     width: 75%;
     background-color: #FFFFFF;
@@ -12,11 +25,16 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 50px 0;
+    border-radius: 20px;
 }
 
 .details-img img{
     width: 300px;
     object-fit: contain;
+}
+
+.details-img{
+   mix-blend-mode: multiply;
 }
  .details-info{
     display: flex;

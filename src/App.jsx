@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1900);
   }, []);
 
 //** anybody inside will be able to use the heated context and theme context*/
